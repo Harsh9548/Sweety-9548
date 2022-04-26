@@ -1,0 +1,15 @@
+No = 4; sum = 0;
+lagrange [No_, n_] :=
+Product [If[Equal[k, n], 1, (x - x[k]) / (x[n] - x[k])], {k, 1, No}];
+For[i = 1, i ≤ No, i++, sum += (f[x[i]] * lagrange [No, i])];
+Print[sum]
+sum = 0;
+points = {{- 2, 9}, {- 1, 16}, {0, 17}, {1, 18}};
+No = Length[points]
+y = points〚All, 1〛
+f = points〚All, 2〛
+lagrange [No_, n_] :=
+Product IfEqual[k, n], 1, (x - y〚k〛)  (y〚n〛 - y〚k〛), {k, 1, No}
+For[i = 1, i ≤ No, i++, sum += (f〚i〛 * lagrange [No, i])]
+Expand[sum]
+sum /. x → 3.1
