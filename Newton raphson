@@ -1,0 +1,12 @@
+nr[f_, x0_, n_] := Module{}, a = N[x0];
+i = 1;
+df[x_] = D[f[x], x];
+Whilei ≤ n,
+b = N[a] - Nf[a]  N[df[a]];
+Print[i, " ", b];
+i++;
+a = b;
+Print["Root =", b]
+f[x_] := 8 x^3 + 7 x^2 - 3 * x - 1;
+Plot[f[x], {x, -3, 3}]
+nr[f, 1.5, 5]
