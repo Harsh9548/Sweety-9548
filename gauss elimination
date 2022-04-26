@@ -1,0 +1,16 @@
+m =
+0 2 8
+3 4 7
+5 2 1
+; x =
+x1
+x2
+x3
+; b =
+1
+2
+-1
+; m.x ⩵ b
+ArrayFlatten[{{m, b}}] // MatrixForm
+RowReduce[%] // MatrixForm
+LinearSolve[m, b]
