@@ -1,0 +1,9 @@
+ClearAll[n, x, f]
+a = Input["Enter the left end point : "]
+b = Input["Enter the right end point : "]
+n = Input["Enter the number of sub interval to be formed : "]
+sum = 0
+h = (b - a) / n
+f[x] = Sin[x]
+For[i = 1, i ≤ n - 1, i++, sum += N[f[x] /. x → (a + i * h)]]
+sum = N[(2 * sum + f[x] /. x → b) * h / 2]
