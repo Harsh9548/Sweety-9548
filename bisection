@@ -1,0 +1,11 @@
+f[x_] = Cos[x] - x * E^x
+Plot[f[x], {x, -2, 2}]
+a = 0;
+b = 2;
+If[f[a] * f[b] > 0, Print["Bisection method can not be applied"]]
+m = (a + b) / 2.0
+For[i = 1, i ≤ 5, i++,
+{If[f[a] * f[m] < 0, {a = a, b = m}, {a = m, b = b}],
+Print[i, " ", a, " ", b];
+m = (a + b) / 2.0}]
+Print["root=", m]
