@@ -1,0 +1,9 @@
+f[x_] = Tan[x] - x^3;
+Plot[f[x], {x, -3, 3}]
+regulafalsi[a0_, b0_, m_] := Module{}, a = N[a0]; b = N[b0];
+c = (a * f[b] - b * f[a])  (f[b] - f[a]); k = 0;
+Whilek < m, If[Sign[f[b]] ⩵ Sign[f[c]], b = c, a = c;];
+c = (a * f[b] - b * f[a])  (f[b] - f[a]); k = k + 1;;
+Print["c= ", NumberForm[c, 5]];
+Print["f[c]= ", NumberForm[f[c], 5]];
+regulafalsi[-1, -2, 15]
