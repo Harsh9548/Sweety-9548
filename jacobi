@@ -1,0 +1,20 @@
+Jacobi[A0_, B0_, P0_, max_] := Module{A = N[A0], B = N[B0],
+i, j, k = 0, n = Length[P0], P = P0, Pold = P0}, Print[" P "0, " = ", P];
+Whilek < max,
+Fori = 1, i ≤ n, i++,
+P[[i]] =
+1
+A[[i, i]]
+B[[i]] + A[[i, i]] × Pold[[i]] - 
+j=1
+n
+A[[i, j]] × Pold[[j]] ;
+Print["P "k+1, " = ", P];
+Pold = P;
+k = k + 1;;
+Return[P];;
+A =
+27 6 -1
+6 1 2
+1 1 5
+;
